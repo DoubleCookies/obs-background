@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import bg from "./Backgrounds/bg5.jpg";
+import React from 'react';
+
+/*
+Priority:
+bg5.jpg
+bg2-2.jpg
+bg1.webp
+bg-inv2.jpg
+bg-inv.jpg
+
+bg1.jpg
+bg2.webp
+bg4.webp
+b3.webp
+bg6.webp
+ */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="app" style={{backgroundImage: `url(${bg})`, backgroundSize: 500}}/>
   );
 }
 
