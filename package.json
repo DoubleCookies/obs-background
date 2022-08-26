@@ -27,7 +27,7 @@
       "react-app/jest"
     ]
   },
-  "resolutions": {
+  "overrides": {
     "@svgr/webpack": "^6.2.1"
   },
   "browserslist": {
