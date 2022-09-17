@@ -1,4 +1,3 @@
-import './App.css';
 import bg from "./Backgrounds/bg5.jpg";
 import React from 'react';
 
