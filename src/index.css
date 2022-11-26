@@ -21,39 +21,3 @@ code {
 
   color: #eeeeee;
 }
-
-@keyframes bgMove {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -500px 0;
-  }
-}
-
-.animation {
-  top: 61%;
-
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-}
-
-.animation-elements {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  overflow-x: hidden;
-  white-space: nowrap;
-  animation: pictures 30s linear infinite;
-  animation-delay: 100ms;
-}
-
-@keyframes pictures {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-12.5%, 0);
-  }
-}
