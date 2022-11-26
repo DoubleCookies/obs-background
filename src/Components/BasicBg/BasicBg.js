@@ -1,8 +1,7 @@
 import bg from "../../Backgrounds/bg5.jpg";
+import bg2 from "../../Backgrounds/bg2-2.jpg";
 import React from 'react';
-import ew2 from '../EwfishSlideBg/ew2.webp';
 import './BasicBg.css';
-import { useLocation, useParams } from 'react-router';
 
 /*
 Priority:
@@ -19,10 +18,48 @@ b3.webp
 bg6.webp
  */
 
-function BasicBg() {
-    return (
-        <div className="app" style={{backgroundImage: `url(${bg})`, backgroundSize: 500}}/>
-    );
+class BasicBg extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            url: `url(${bg})`,
+            counter: 0
+        }
+    }
+
+    changeBg() {
+        const {counter} = this.state;
+        let newUrl;
+        console.log(counter)
+        switch ((counter + 1) % 2) {
+            case 0: {
+                newUrl = `url(${bg})`;
+                break;
+            }
+            case 1: {
+                newUrl = `url(${bg2})`;
+                break;
+            }
+            default: {
+                newUrl = `url(${bg})`;
+                break;
+            }
+        }
+        this.setState({
+            counter: counter + 1,
+            url: newUrl
+        })
+    }
+
+    render() {
+        return (
+            <div onClick={this.changeBg.bind(this)}
+                 className="app"
+                 style={{backgroundImage: `${this.state.url}`,
+                     backgroundSize: 500}}
+            />
+        );
+    }
 }
 
 export default BasicBg;
