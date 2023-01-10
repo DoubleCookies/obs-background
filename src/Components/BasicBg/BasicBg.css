@@ -23,6 +23,8 @@
     white-space: nowrap;
     animation: pictures 30s linear infinite;
     animation-delay: 100ms;
+
+    user-select: none;
 }
 
 @keyframes pictures {
